@@ -1,0 +1,36 @@
+vehicle:
+  velocity: 10.0          # m/s
+  wheelbase: 2.5          # m
+
+sensor:
+  gps_noise_std: 0.5      # m
+  heading_noise_std_deg: 5.0  # deg
+
+controller:
+  lookahead_distance: 5.0 # m
+  goal_tolerance: 1.0     # m
+  max_steering_deg: 30.0  # deg
+
+kalman_filter:
+  process_noise_position: 0.10       # m
+  process_noise_heading_deg: 2.0     # deg
+  measurement_noise_position: 0.50   # m
+  measurement_noise_heading_deg: 5.0 # deg
+  initial_position_std: 1.0          # m
+  initial_heading_std_deg: 20.0      # deg
+
+simulation:
+  time_step: 0.1          # s
+  duration: 20.0          # s
+  random_seed: 42
+  initial_state: [0.0, 0.0, 0.0]  # [x, y, theta] with theta in rad
+
+path:
+  x_start: 0.0
+  x_end: 80.0
+  num_points: 400
+  amplitude: 8.0
+  wavelength: 35.0
+
+analysis:
+  lookahead_values: [2.5, 5.0, 8.0]
